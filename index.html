@@ -88,7 +88,7 @@
     50% { transform: translate(-50%, -60%) rotate(2deg); }
     100% { left: 100%; transform: translate(-50%, -50%) rotate(0deg); }
   }
-  .boat-travel { animation: boatTravel 8s linear infinite; }
+  .boat-travel { animation: boatTravel 40s linear infinite; }
 
   @media (prefers-reduced-motion: reduce) {
     .float, .float-slow, .pulse-cta, .flow-line, .flow-dash, .boat-drift, .boat-travel { animation: none; }
@@ -402,8 +402,14 @@
   </div>
   <div class="grid sm:grid-cols-4 gap-6 relative">
     <div class="hidden sm:block absolute top-6 left-[12.5%] right-[12.5%] h-0.5">
-      <div class="flow-line absolute inset-0"></div>
-      <div class="boat-travel absolute top-1/2 z-20 text-base opacity-80" style="left:0%">🚤</div>
+      <svg viewBox="0 0 800 20" preserveAspectRatio="none" class="absolute inset-x-0 top-1/2 -translate-y-1/2 w-full h-3" aria-hidden="true">
+        <path d="M0 10 Q20 3 40 10 T80 10 T120 10 T160 10 T200 10 T240 10 T280 10 T320 10 T360 10 T400 10 T440 10 T480 10 T520 10 T560 10 T600 10 T640 10 T680 10 T720 10 T760 10 T800 10" stroke="#9BB89A" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+      <svg viewBox="0 0 36 30" class="boat-travel absolute top-1/2 z-20 w-8 h-7" style="left:0%" aria-hidden="true">
+        <path d="M0 16 L36 16 L29 27 L7 27 Z" fill="#A85C3F"/>
+        <line x1="18" y1="16" x2="18" y2="2" stroke="#733E29" stroke-width="2" stroke-linecap="round"/>
+        <path d="M18 3 L31 14 L18 14 Z" fill="#DDA23A"/>
+      </svg>
     </div>
     <div class="reveal relative text-center" style="transition-delay:0ms">
       <div class="w-12 h-12 mx-auto rounded-full bg-white border border-stone-100 flex items-center justify-center shadow-card relative z-10 text-xl">
