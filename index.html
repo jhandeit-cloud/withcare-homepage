@@ -124,12 +124,12 @@
     opacity: 0;
     transform-box: fill-box;
     transform-origin: center;
-    animation: smokePuff 6s ease-out infinite;
+    animation: smokePuff 12s ease-out infinite;
   }
   @keyframes smokePuff {
-    0% { opacity: 0; transform: scale(0.35); }
-    25% { opacity: 0.4; }
-    100% { opacity: 0; transform: scale(1.8); }
+    0% { opacity: 0; transform: translateX(0) scale(0.35); }
+    20% { opacity: 0.4; }
+    100% { opacity: 0; transform: translateX(-5px) scale(1.9); }
   }
 
   @keyframes riseCloud {
@@ -525,8 +525,8 @@
             <path d="M16 33h6l3-6 4 12 3-8 2 4h6" stroke="#733E29" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </g>
           <circle class="smoke-puff" cx="-6.5" cy="-1.6" r="0.9" fill="#FFFFFF"/>
-          <circle class="smoke-puff" cx="-8.5" cy="-2.1" r="1.15" fill="#FFFFFF" style="animation-delay:2s"/>
-          <circle class="smoke-puff" cx="-10.8" cy="-2.7" r="1.4" fill="#FFFFFF" style="animation-delay:4s"/>
+          <circle class="smoke-puff" cx="-8.5" cy="-2.1" r="1.15" fill="#FFFFFF" style="animation-delay:4s"/>
+          <circle class="smoke-puff" cx="-10.8" cy="-2.7" r="1.4" fill="#FFFFFF" style="animation-delay:8s"/>
           <animateMotion dur="70s" repeatCount="indefinite" rotate="auto" path="M45.53,22.94 Q50,14 54.47,22.94 L81.53,77.06 Q86,86 76,86 L24,86 Q14,86 18.47,77.06 L45.53,22.94 Z"/>
         </g>
       </svg>
