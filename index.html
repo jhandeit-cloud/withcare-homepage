@@ -362,29 +362,15 @@
     <p class="text-brand font-bold text-[30px] tracking-wide mb-8">서비스 가능 지역</p>
     <div class="relative mx-auto aspect-[500/280] max-w-[420px] sm:max-w-[480px]">
       <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#DDA23A"/>
-            <stop offset="100%" stop-color="#733E29"/>
-          </linearGradient>
-          <radialGradient id="nodeGrad" cx="35%" cy="30%" r="70%">
-            <stop offset="0%" stop-color="#F0B27A"/>
-            <stop offset="55%" stop-color="#A85C3F"/>
-            <stop offset="100%" stop-color="#733E29"/>
-          </radialGradient>
-          <filter id="softShadow" x="-60%" y="-60%" width="220%" height="220%">
-            <feDropShadow dx="0" dy="0.6" stdDeviation="0.6" flood-color="#733E29" flood-opacity="0.45"/>
-          </filter>
-        </defs>
-        <line x1="50" y1="14" x2="14" y2="86" stroke="url(#lineGrad)" stroke-width="0.9" stroke-linecap="round" filter="url(#softShadow)"/>
-        <line x1="50" y1="14" x2="86" y2="86" stroke="url(#lineGrad)" stroke-width="0.9" stroke-linecap="round" filter="url(#softShadow)"/>
-        <line x1="14" y1="86" x2="86" y2="86" stroke="url(#lineGrad)" stroke-width="0.9" stroke-linecap="round" filter="url(#softShadow)"/>
-        <circle cx="50" cy="14" r="2.4" fill="url(#nodeGrad)" filter="url(#softShadow)"/>
-        <circle cx="14" cy="86" r="2.4" fill="url(#nodeGrad)" filter="url(#softShadow)"/>
-        <circle cx="86" cy="86" r="2.4" fill="url(#nodeGrad)" filter="url(#softShadow)"/>
+        <line x1="50" y1="14" x2="14" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-dasharray="2.5 2.5" opacity="0.5"/>
+        <line x1="50" y1="14" x2="86" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-dasharray="2.5 2.5" opacity="0.5"/>
+        <line x1="14" y1="86" x2="86" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-dasharray="2.5 2.5" opacity="0.5"/>
+        <circle cx="50" cy="14" r="1.4" fill="#A85C3F"/>
+        <circle cx="14" cy="86" r="1.4" fill="#A85C3F"/>
+        <circle cx="86" cy="86" r="1.4" fill="#A85C3F"/>
       </svg>
-      <div class="absolute w-24 h-24 rounded-full bg-gradient-to-br from-accent to-[#B37E22] flex items-center justify-center shadow-brand-lg" style="left:50%; top:62%; transform:translate(-50%,-50%)">
-        <img src="./brand_logo/logo.svg" alt="위드케어" class="w-14 h-14 rounded-xl shadow-card">
+      <div class="absolute w-12 h-12 rounded-full bg-accent flex items-center justify-center shadow-accent" style="left:50%; top:62%; transform:translate(-50%,-50%)">
+        <img src="./brand_logo/logo.svg" alt="위드케어" class="w-7 h-7 rounded-md">
       </div>
       <span class="absolute whitespace-nowrap rounded-full bg-white border border-stone-200 shadow-card text-black font-bold text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5" style="left:50%; top:14%; transform:translate(-50%,-50%)">인천 계양구</span>
       <span class="absolute whitespace-nowrap rounded-full bg-white border border-stone-200 shadow-card text-black font-bold text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5" style="left:14%; top:86%; transform:translate(-50%,-50%)">인천 서해구</span>
