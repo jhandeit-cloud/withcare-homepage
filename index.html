@@ -148,6 +148,13 @@
 </head>
 <body class="bg-cream text-stone-800 antialiased">
 
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
+  <div class="absolute -top-24 -left-24 w-80 h-80 sm:w-[26rem] sm:h-[26rem] rounded-full bg-brand-light opacity-70 blur-3xl"></div>
+  <div class="absolute top-1/4 -right-28 w-72 h-72 sm:w-[24rem] sm:h-[24rem] rounded-full bg-sage-light opacity-70 blur-3xl"></div>
+  <div class="absolute bottom-0 left-1/4 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-accent/15 blur-3xl"></div>
+  <div class="absolute bottom-1/3 -right-16 w-64 h-64 rounded-full bg-brand/10 blur-3xl"></div>
+</div>
+
 <!-- Header -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur border-b border-stone-100">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 sm:h-20 flex items-center justify-between">
@@ -181,7 +188,7 @@
 <!-- Hero -->
 <section class="relative overflow-hidden bg-dots">
   <div class="absolute inset-0 bg-gradient-to-b from-brand-light/70 via-cream to-cream pointer-events-none"></div>
-  <div class="relative max-w-6xl mx-auto px-5 sm:px-8 pt-14 sm:pt-20 pb-16 sm:pb-24 grid md:grid-cols-2 gap-10 items-center">
+  <div class="relative max-w-2xl mx-auto px-5 sm:px-8 pt-14 sm:pt-20 pb-16 sm:pb-24">
     <div>
       <span class="inline-flex items-center gap-2.5 rounded-full bg-gradient-to-r from-brand-light to-white border border-brand/15 shadow-card text-brand-dark text-sm sm:text-base font-bold pl-2 sm:pl-2.5 pr-4 sm:pr-5 py-2 sm:py-2.5">
         <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gradient-to-br from-accent to-brand text-white flex items-center justify-center flex-shrink-0 shadow-accent">
@@ -243,81 +250,6 @@
         </div>
       </div>
     </div>
-    <div class="relative flex justify-center md:justify-end">
-      <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-[2.5rem] bg-gradient-to-br from-brand-light to-white shadow-brand-lg flex items-center justify-center">
-        <svg viewBox="0 0 320 320" class="w-[85%] h-[85%]" role="img" aria-label="요양보호사가 소파에 나란히 앉은 두 어르신을 방문해 웃으며 돌봐드리는 아늑한 거실 그림">
-          <title>요양보호사가 소파에 앉은 어르신들을 웃으며 돌봐드리는 아늑한 모습</title>
-          <circle cx="160" cy="160" r="150" fill="#F1F2F4"/>
-
-          <!-- window -->
-          <rect x="212" y="26" width="76" height="62" rx="10" fill="#DCE9E3"/>
-          <path d="M250 26v62M212 57h76" stroke="#FFFFFF" stroke-width="4"/>
-          <circle cx="296" cy="40" r="12" fill="#DDA23A" opacity="0.55"/>
-
-          <!-- plant -->
-          <path d="M40 262q-4-20 8-30q10 18 2 32z" fill="#7C9473"/>
-          <path d="M50 258q10-16 24-16q-2 20-22 22z" fill="#7C9473" opacity="0.85"/>
-          <rect x="36" y="266" width="28" height="26" rx="5" fill="#A85C3F"/>
-
-          <!-- rug -->
-          <ellipse cx="176" cy="298" rx="120" ry="16" fill="#733E29" opacity="0.08"/>
-
-          <!-- sofa -->
-          <rect x="56" y="176" width="220" height="66" rx="26" fill="#EEF2E8"/>
-          <rect x="50" y="228" width="232" height="50" rx="20" fill="#E3EAE0"/>
-          <line x1="142" y1="236" x2="142" y2="272" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/>
-          <line x1="208" y1="236" x2="208" y2="272" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/>
-          <rect x="36" y="222" width="22" height="56" rx="11" fill="#DDE5D6"/>
-          <rect x="274" y="222" width="22" height="56" rx="11" fill="#DDE5D6"/>
-
-          <!-- elderly left (seated) -->
-          <path d="M92 205c0-15 12-26 28-26s28 11 28 26v34a10 10 0 01-10 10h-36a10 10 0 01-10-10v-34z" fill="#A85C3F"/>
-          <circle cx="120" cy="182" r="27" fill="#F6C9A0"/>
-          <path d="M94 178a26 26 0 0152 0c-4-13-46-14-52 0z" fill="#EDEDED"/>
-          <path d="M97 169c9-9 37-9 44 2" stroke="#EDEDED" stroke-width="6" stroke-linecap="round" fill="none"/>
-          <circle cx="110" cy="184" r="3.2" fill="#3E2C22"/>
-          <circle cx="130" cy="184" r="3.2" fill="#3E2C22"/>
-          <circle cx="105" cy="193" r="4.6" fill="#EDA98C" opacity="0.6"/>
-          <circle cx="135" cy="193" r="4.6" fill="#EDA98C" opacity="0.6"/>
-          <path d="M108 196q12 8 22 0" stroke="#3E2C22" stroke-width="2.4" stroke-linecap="round" fill="none"/>
-
-          <!-- elderly right (seated) -->
-          <path d="M168 205c0-15 12-26 28-26s28 11 28 26v34a10 10 0 01-10 10h-36a10 10 0 01-10-10v-34z" fill="#DDA23A"/>
-          <circle cx="196" cy="182" r="27" fill="#F6C9A0"/>
-          <path d="M170 180a25 25 0 0151-2c-7-12-45-11-51 2z" fill="#E8E8E8"/>
-          <circle cx="186" cy="184" r="3.2" fill="#3E2C22"/>
-          <circle cx="206" cy="184" r="3.2" fill="#3E2C22"/>
-          <circle cx="181" cy="193" r="4.6" fill="#EDA98C" opacity="0.6"/>
-          <circle cx="211" cy="193" r="4.6" fill="#EDA98C" opacity="0.6"/>
-          <path d="M184 196q12 8 22 0" stroke="#3E2C22" stroke-width="2.4" stroke-linecap="round" fill="none"/>
-
-          <!-- caregiver (standing, visiting) -->
-          <ellipse cx="252" cy="300" rx="34" ry="12" fill="#733E29" opacity="0.12"/>
-          <path d="M222 168c0-17 13-30 30-30s30 13 30 30v112a11 11 0 01-11 11h-38a11 11 0 01-11-11V168z" fill="#7C9473"/>
-          <path d="M230 141h44v14a22 22 0 01-44 0z" fill="#FFFFFF"/>
-          <path d="M246 210q6-8 15-3t1 16q-8 6-16-1-5-6 0-12z" fill="#DDA23A"/>
-          <circle cx="252" cy="108" r="32" fill="#F6C9A0"/>
-          <path d="M221 104a31 31 0 0162 0c-11-12-51-12-62 0z" fill="#3E2C22"/>
-          <circle cx="241" cy="109" r="3.4" fill="#3E2C22"/>
-          <circle cx="263" cy="109" r="3.4" fill="#3E2C22"/>
-          <circle cx="235" cy="120" r="5" fill="#EDA98C" opacity="0.6"/>
-          <circle cx="269" cy="120" r="5" fill="#EDA98C" opacity="0.6"/>
-          <path d="M241 123q11 9 22 0" stroke="#3E2C22" stroke-width="2.6" stroke-linecap="round" fill="none"/>
-          <path d="M224 190q-14 4-18 22" stroke="#7C9473" stroke-width="14" stroke-linecap="round" fill="none"/>
-
-          <path d="M158 66q8-10 18-3t1 20q-10 8-19-1-8-9 0-16z" fill="#A85C3F" opacity="0.85"/>
-        </svg>
-      </div>
-      <div class="float absolute -bottom-5 -left-2 sm:left-0 bg-white rounded-2xl shadow-card px-4 py-3 flex items-center gap-2.5">
-        <div class="w-9 h-9 rounded-full bg-brand-light flex items-center justify-center flex-shrink-0 text-lg">
-          ⏰
-        </div>
-        <div>
-          <p class="text-xs text-stone-400">평균 상담 응답</p>
-          <p class="font-bold text-stone-800 text-sm">신청 후 30분 이내</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -351,7 +283,7 @@
 
 <div class="h-6 bg-gradient-to-b from-black/[0.05] to-transparent" aria-hidden="true"></div>
 <!-- Solution -->
-<section class="bg-gradient-to-br from-brand-light/60 via-white to-white">
+<section class="bg-gradient-to-br from-brand-light/60 via-white/75 to-white/60">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24 text-center">
     <p class="text-brand font-bold text-[30px] tracking-wide">위드케어의 약속</p>
     <h2 class="font-display font-bold text-[20px] text-stone-900 mt-3 mb-12">
@@ -418,7 +350,7 @@
 
 <div class="h-6 bg-gradient-to-b from-black/[0.05] to-transparent" aria-hidden="true"></div>
 <!-- Why us -->
-<section id="why" class="bg-gradient-to-bl from-sage-light/60 via-white to-white">
+<section id="why" class="bg-gradient-to-bl from-sage-light/60 via-white/75 to-white/60">
   <div class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
     <div class="text-center max-w-2xl mx-auto mb-12">
       <p class="text-brand font-bold text-[30px] tracking-wide">WHY WITHCARE</p>
@@ -604,7 +536,7 @@
 
 <div class="h-6 bg-gradient-to-b from-black/[0.05] to-transparent" aria-hidden="true"></div>
 <!-- Consultation form -->
-<section id="consult-form" class="bg-gradient-to-br from-brand-light via-white to-sage-light">
+<section id="consult-form" class="bg-gradient-to-br from-brand-light/90 via-white/70 to-sage-light/80">
   <div class="max-w-2xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
     <div class="text-center mb-10">
       <p class="text-brand font-bold text-[30px] tracking-wide">FREE CONSULTATION</p>
