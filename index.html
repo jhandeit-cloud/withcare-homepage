@@ -77,8 +77,14 @@
   @keyframes dashOrbit { to { stroke-dashoffset: -20; } }
   .flow-dash { stroke-dasharray: 3 3; animation: dashOrbit 16s linear infinite; }
 
+  @keyframes driftBoat {
+    0%, 100% { transform: translate(-8px, 0) rotate(-2deg); }
+    50% { transform: translate(8px, -3px) rotate(2deg); }
+  }
+  .boat-drift { animation: driftBoat 6s ease-in-out infinite; transform-origin: 80px 40px; }
+
   @media (prefers-reduced-motion: reduce) {
-    .float, .float-slow, .pulse-cta, .flow-line, .flow-dash { animation: none; }
+    .float, .float-slow, .pulse-cta, .flow-line, .flow-dash, .boat-drift { animation: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
   }
 </style>
@@ -144,6 +150,15 @@
           <rect x="0" y="112" width="205" height="37" rx="8" fill="#DDA23A" opacity="0.28"/>
           <text x="0" y="60" font-family="'Noto Serif KR', serif" font-weight="900" font-size="44" fill="#1c1917">어르신의 편안한 하루,</text>
           <text x="0" y="152" font-family="'Noto Serif KR', serif" font-weight="900" font-size="48"><tspan fill="#A85C3F">위드케어</tspan><tspan fill="#1c1917">가 함께합니다</tspan></text>
+        </svg>
+        <svg viewBox="0 0 160 60" class="absolute -bottom-3 right-1 sm:right-8 w-20 sm:w-28 h-auto pointer-events-none opacity-90" aria-hidden="true">
+          <path d="M0 40 Q20 32 40 40 T80 40 T120 40 T160 40" stroke="#9BB89A" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.55"/>
+          <path d="M0 47 Q20 41 40 47 T80 47 T120 47 T160 47" stroke="#C7DCC6" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+          <g class="boat-drift">
+            <path d="M62 36 L98 36 L91 47 L69 47 Z" fill="#A85C3F"/>
+            <line x1="80" y1="36" x2="80" y2="20" stroke="#733E29" stroke-width="2" stroke-linecap="round"/>
+            <path d="M80 21 L93 33 L80 33 Z" fill="#DDA23A"/>
+          </g>
         </svg>
       </div>
       <p class="text-stone-500 text-sm sm:text-base mt-5 leading-relaxed">
