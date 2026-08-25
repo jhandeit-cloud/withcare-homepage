@@ -83,8 +83,15 @@
   }
   .boat-drift { animation: driftBoat 6s ease-in-out infinite; transform-origin: 80px 40px; }
 
+  @keyframes boatTravel {
+    0% { left: 0%; transform: translate(-50%, -50%) rotate(0deg); }
+    50% { transform: translate(-50%, -60%) rotate(2deg); }
+    100% { left: 100%; transform: translate(-50%, -50%) rotate(0deg); }
+  }
+  .boat-travel { animation: boatTravel 8s linear infinite; }
+
   @media (prefers-reduced-motion: reduce) {
-    .float, .float-slow, .pulse-cta, .flow-line, .flow-dash, .boat-drift { animation: none; }
+    .float, .float-slow, .pulse-cta, .flow-line, .flow-dash, .boat-drift, .boat-travel { animation: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
   }
 </style>
@@ -394,7 +401,10 @@
     <h2 class="font-display font-bold text-[20px] text-stone-900 mt-3">이용 절차</h2>
   </div>
   <div class="grid sm:grid-cols-4 gap-6 relative">
-    <div class="flow-line hidden sm:block absolute top-6 left-[12.5%] right-[12.5%] h-0.5"></div>
+    <div class="hidden sm:block absolute top-6 left-[12.5%] right-[12.5%] h-0.5">
+      <div class="flow-line absolute inset-0"></div>
+      <div class="boat-travel absolute top-1/2 z-20 text-base opacity-80" style="left:0%">🚤</div>
+    </div>
     <div class="reveal relative text-center" style="transition-delay:0ms">
       <div class="w-12 h-12 mx-auto rounded-full bg-white border border-stone-100 flex items-center justify-center shadow-card relative z-10 text-xl">
         📞
