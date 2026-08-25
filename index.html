@@ -66,8 +66,19 @@
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(.22,.61,.36,1), transform 0.7s cubic-bezier(.22,.61,.36,1); }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
+  @keyframes dashFlow { to { background-position: 24px 0; } }
+  .flow-line {
+    background-image: repeating-linear-gradient(to right, #A85C3F 0 8px, transparent 8px 16px);
+    background-size: 24px 2px;
+    background-repeat: repeat-x;
+    animation: dashFlow 1s linear infinite;
+  }
+
+  @keyframes dashOrbit { to { stroke-dashoffset: -20; } }
+  .flow-dash { stroke-dasharray: 3 3; animation: dashOrbit 1.6s linear infinite; }
+
   @media (prefers-reduced-motion: reduce) {
-    .float, .float-slow, .pulse-cta { animation: none; }
+    .float, .float-slow, .pulse-cta, .flow-line, .flow-dash { animation: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
   }
 </style>
@@ -367,7 +378,7 @@
     <h2 class="font-display font-bold text-[20px] text-stone-900 mt-3">이용 절차</h2>
   </div>
   <div class="grid sm:grid-cols-4 gap-6 relative">
-    <div class="hidden sm:block absolute top-6 left-[12.5%] right-[12.5%] h-0.5 bg-stone-200"></div>
+    <div class="flow-line hidden sm:block absolute top-6 left-[12.5%] right-[12.5%] h-0.5"></div>
     <div class="reveal relative text-center" style="transition-delay:0ms">
       <div class="w-12 h-12 mx-auto rounded-full bg-brand text-white font-display font-bold flex items-center justify-center shadow-brand relative z-10">1</div>
       <p class="font-bold text-stone-800 text-base mt-2">상담 신청</p>
@@ -398,9 +409,9 @@
     <p class="text-brand font-bold text-[30px] tracking-wide mb-8">서비스 가능 지역</p>
     <div class="relative mx-auto aspect-[500/280] max-w-[420px] sm:max-w-[480px]">
       <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <line x1="50" y1="14" x2="14" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-dasharray="2.5 2.5" opacity="0.5"/>
-        <line x1="50" y1="14" x2="86" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-dasharray="2.5 2.5" opacity="0.5"/>
-        <line x1="14" y1="86" x2="86" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-dasharray="2.5 2.5" opacity="0.5"/>
+        <line class="flow-dash" x1="50" y1="14" x2="14" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+        <line class="flow-dash" x1="50" y1="14" x2="86" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+        <line class="flow-dash" x1="14" y1="86" x2="86" y2="86" stroke="#A85C3F" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
         <circle cx="50" cy="14" r="1.4" fill="#A85C3F"/>
         <circle cx="14" cy="86" r="1.4" fill="#A85C3F"/>
         <circle cx="86" cy="86" r="1.4" fill="#A85C3F"/>
@@ -540,6 +551,14 @@
     <p class="text-sm text-stone-600 mt-8">&copy; 2026 위드케어 재가노인복지센터. All rights reserved.</p>
   </div>
 </footer>
+
+<a href="#" aria-label="맨 위로 이동" class="float fixed bottom-5 right-5 z-40 bg-white rounded-2xl shadow-brand-lg px-3 py-2 flex items-center gap-2 hover:shadow-lg transition-shadow duration-150">
+  <img src="./brand_logo/logo.svg" alt="위드케어 로고" class="w-9 h-9 rounded-lg flex-shrink-0">
+  <div class="text-left leading-tight whitespace-nowrap">
+    <p class="font-display font-bold text-brand-dark text-sm">위드케어</p>
+    <p class="text-[10px] text-stone-400">재가노인복지센터</p>
+  </div>
+</a>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
