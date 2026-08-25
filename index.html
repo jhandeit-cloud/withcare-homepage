@@ -90,38 +90,46 @@
   }
   .boat-travel { animation: boatTravel 40s linear infinite; }
 
-  .bubble-field { pointer-events: none; z-index: 0; }
-  .droplet {
-    position: absolute;
-    bottom: -80px;
-    background: rgba(221,162,58,0.16);
-    border: 1px solid rgba(168,92,63,0.2);
-    border-radius: 50% 50% 50% 0;
-    transform: rotate(-45deg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation-name: riseUp;
-    animation-timing-function: ease-in;
+  .cloud-drop {
+    position: fixed;
+    bottom: -70px;
+    z-index: 30;
+    pointer-events: none;
+    animation-name: riseCloud;
+    animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   }
-  .droplet span {
-    display: block;
-    transform: rotate(45deg);
+  .cloud-shape {
+    position: relative;
+    background: rgba(255,255,255,0.88);
+    border: 1px solid rgba(168,92,63,0.15);
+    border-radius: 999px;
+    padding: 7px 16px;
+    font-size: 11px;
     font-weight: 700;
     color: #733E29;
     white-space: nowrap;
+    box-shadow: 0 6px 16px -6px rgba(115,62,41,0.18);
   }
-  @keyframes riseUp {
-    0% { transform: translateY(0) rotate(-45deg); opacity: 0; }
-    12% { opacity: 0.85; }
-    82% { opacity: 0.85; }
-    100% { transform: translateY(-360px) rotate(-45deg); opacity: 0; }
+  .cloud-shape::before, .cloud-shape::after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border: inherit;
+    border-radius: 50%;
+  }
+  .cloud-shape::before { left: 8px; top: -9px; width: 18px; height: 18px; }
+  .cloud-shape::after { right: 12px; top: -6px; width: 13px; height: 13px; }
+  @keyframes riseCloud {
+    0% { transform: translateY(0); opacity: 0; }
+    10% { opacity: 0.8; }
+    88% { opacity: 0.8; }
+    100% { transform: translateY(-130vh); opacity: 0; }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .float, .float-slow, .pulse-cta, .flow-line, .flow-dash, .boat-drift, .boat-travel { animation: none; }
-    .droplet { display: none; }
+    .cloud-drop { display: none; }
     .reveal { opacity: 1; transform: none; transition: none; }
   }
 </style>
@@ -359,17 +367,7 @@
 
 <div class="h-6 bg-gradient-to-b from-black/[0.05] to-transparent" aria-hidden="true"></div>
 <!-- Services -->
-<section id="services" class="relative overflow-hidden">
-  <div class="bubble-field absolute inset-0" aria-hidden="true">
-    <div class="droplet" style="left:6%; width:58px; height:58px; animation-duration:11s; animation-delay:0s;"><span class="text-[10px]">방문요양</span></div>
-    <div class="droplet" style="left:20%; width:46px; height:46px; animation-duration:8.5s; animation-delay:2.4s;"><span class="text-[9px]">방문간호</span></div>
-    <div class="droplet" style="left:34%; width:64px; height:64px; animation-duration:13s; animation-delay:1s;"><span class="text-[10px]">방문목욕</span></div>
-    <div class="droplet" style="left:50%; width:50px; height:50px; animation-duration:9.5s; animation-delay:4.2s;"><span class="text-[9px]">방문간호</span></div>
-    <div class="droplet" style="left:64%; width:60px; height:60px; animation-duration:12s; animation-delay:0.6s;"><span class="text-[10px]">방문요양</span></div>
-    <div class="droplet" style="left:78%; width:48px; height:48px; animation-duration:10s; animation-delay:3.3s;"><span class="text-[9px]">방문목욕</span></div>
-    <div class="droplet" style="left:90%; width:56px; height:56px; animation-duration:11.5s; animation-delay:5.5s;"><span class="text-[10px]">방문간호</span></div>
-  </div>
-  <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+<section id="services" class="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
   <div class="text-center max-w-2xl mx-auto mb-12">
     <p class="text-brand font-bold text-[30px] tracking-wide">SERVICE</p>
     <h2 class="font-display font-bold text-[20px] text-stone-900 mt-3">제공 서비스</h2>
@@ -397,7 +395,6 @@
       <h3 class="font-bold text-xl text-stone-900 mb-2">방문간호</h3>
       <p class="text-base text-stone-500 leading-relaxed">간호사가 방문해 건강상태 확인, 투약관리, 처치 등 전문 간호서비스를 제공합니다.</p>
     </div>
-  </div>
   </div>
 </section>
 
@@ -653,6 +650,16 @@
     <p class="text-sm text-stone-600 mt-8">&copy; 2026 위드케어 재가노인복지센터. All rights reserved.</p>
   </div>
 </footer>
+
+<div class="cloud-drop" style="left:18%; animation-duration:52s; animation-delay:0s;" aria-hidden="true">
+  <div class="cloud-shape">방문요양</div>
+</div>
+<div class="cloud-drop" style="left:52%; animation-duration:60s; animation-delay:18s;" aria-hidden="true">
+  <div class="cloud-shape">방문목욕</div>
+</div>
+<div class="cloud-drop" style="left:78%; animation-duration:56s; animation-delay:36s;" aria-hidden="true">
+  <div class="cloud-shape">방문간호</div>
+</div>
 
 <a href="#" aria-label="맨 위로 이동" class="float fixed bottom-5 right-5 z-40 bg-white rounded-2xl shadow-brand-lg px-3 py-2 flex items-center gap-2 hover:shadow-lg transition-shadow duration-150">
   <img src="./brand_logo/logo.svg" alt="위드케어 로고" class="w-9 h-9 rounded-lg flex-shrink-0">
