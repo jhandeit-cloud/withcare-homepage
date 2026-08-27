@@ -19,13 +19,13 @@
           accent: { DEFAULT: '#DDA23A', dark: '#B37E22' },
           sage: { light: '#EEF2E8', DEFAULT: '#7C9473', dark: '#57715A' },
           cream: '#FFFFFF',
-          primary: { DEFAULT: '#533afd', deep: '#4434d4', press: '#2e2b8c', soft: '#665efd', subdued: '#b9b9f9' },
-          navy: '#1c1e54',
-          ink: { DEFAULT: '#0d253d', secondary: '#273951', mute: '#64748d', mute2: '#61718a' },
-          canvas: { DEFAULT: '#ffffff', soft: '#f6f9fc', cream: '#f5e9d4' },
-          hairline: { DEFAULT: '#e3e8ee', input: '#a8c3de' },
-          ruby: '#ea2261',
-          magenta: '#f96bee',
+          primary: { DEFAULT: '#C9793C', deep: '#A85C3F', press: '#7A4526', soft: '#DDA23A', subdued: '#F4E1C4' },
+          navy: '#4A3220',
+          ink: { DEFAULT: '#3B2C21', secondary: '#5B4534', mute: '#8A7361', mute2: '#8A7361' },
+          canvas: { DEFAULT: '#ffffff', soft: '#FBF4E9', cream: '#f5e9d4' },
+          hairline: { DEFAULT: '#EAD9C0', input: '#D7B78C' },
+          ruby: '#BF5A2E',
+          magenta: '#E8875C',
           lemon: '#9b6829',
         },
         fontFamily: {
@@ -33,12 +33,12 @@
           sans: ['"Inter"', '"Noto Sans KR"', 'sans-serif'],
         },
         boxShadow: {
-          brand: '0 1px 3px rgba(0,55,112,0.08)',
-          'brand-lg': '0 8px 24px rgba(0,55,112,0.08), 0 2px 6px rgba(0,55,112,0.04)',
-          accent: '0 8px 24px rgba(0,55,112,0.08), 0 2px 6px rgba(0,55,112,0.04)',
-          card: '0 1px 3px rgba(0,55,112,0.08)',
-          level1: '0 1px 3px rgba(0,55,112,0.08)',
-          level2: '0 8px 24px rgba(0,55,112,0.08), 0 2px 6px rgba(0,55,112,0.04)',
+          brand: '0 1px 3px rgba(120,72,30,0.10)',
+          'brand-lg': '0 8px 24px rgba(120,72,30,0.10), 0 2px 6px rgba(120,72,30,0.05)',
+          accent: '0 8px 24px rgba(120,72,30,0.10), 0 2px 6px rgba(120,72,30,0.05)',
+          card: '0 1px 3px rgba(120,72,30,0.10)',
+          level1: '0 1px 3px rgba(120,72,30,0.10)',
+          level2: '0 8px 24px rgba(120,72,30,0.10), 0 2px 6px rgba(120,72,30,0.05)',
         },
       },
     },
@@ -50,7 +50,7 @@
     font-family: 'Inter', 'Noto Sans KR', sans-serif; overflow-x: hidden; max-width: 100%;
     background: #FFFFFF;
     font-weight: 300;
-    color: #0d253d;
+    color: #3B2C21;
     font-feature-settings: "ss01";
   }
   h1, h2, h3, .font-display { font-family: 'Inter', 'Noto Sans KR', sans-serif; font-weight: 300; }
@@ -60,14 +60,14 @@
   .btn { transition-property: transform, opacity, box-shadow, background-color; transition-duration: 150ms; }
   .btn:hover { transform: scale(1.02); }
   .btn:active { transform: scale(0.97); }
-  .icon-glow { box-shadow: 0 0 22px 4px rgba(221,162,58,0.3), 0 1px 3px rgba(0,55,112,0.08); }
+  .icon-glow { box-shadow: 0 0 22px 4px rgba(221,162,58,0.35), 0 1px 3px rgba(120,72,30,0.10); }
   .card-hover { transition-property: transform, box-shadow; transition-duration: 250ms; transition-timing-function: cubic-bezier(.22,.61,.36,1); }
-  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,55,112,0.12), 0 4px 10px rgba(0,55,112,0.06); }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(120,72,30,0.14), 0 4px 10px rgba(120,72,30,0.07); }
   details.card-hover:hover { transform: none; }
   details.card-hover { transition-property: box-shadow, border-color; }
-  details.card-hover:hover { border-color: rgba(83,58,253,0.3); box-shadow: 0 8px 20px rgba(0,55,112,0.08); }
+  details.card-hover:hover { border-color: rgba(201,121,60,0.35); box-shadow: 0 8px 20px rgba(120,72,30,0.10); }
   .bg-dots {
-    background-image: radial-gradient(rgba(83,58,253,0.12) 1.5px, transparent 1.5px);
+    background-image: radial-gradient(rgba(201,121,60,0.14) 1.5px, transparent 1.5px);
     background-size: 22px 22px;
   }
   details > summary { list-style: none; }
@@ -79,8 +79,8 @@
   .float-slow { animation: floaty 7s ease-in-out infinite; }
 
   @keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 10px 25px -8px rgba(83,58,253,0.5); }
-    50% { box-shadow: 0 10px 34px -6px rgba(83,58,253,0.75); }
+    0%, 100% { box-shadow: 0 10px 25px -8px rgba(201,121,60,0.5); }
+    50% { box-shadow: 0 10px 34px -6px rgba(201,121,60,0.75); }
   }
   .pulse-cta { animation: pulseGlow 2.6s ease-in-out infinite; }
 
@@ -92,7 +92,7 @@
 
   @keyframes dashFlow { to { background-position: 24px 0; } }
   .flow-line {
-    background-image: repeating-linear-gradient(to right, #533afd 0 8px, transparent 8px 16px);
+    background-image: repeating-linear-gradient(to right, #C9793C 0 8px, transparent 8px 16px);
     background-size: 24px 2px;
     background-repeat: repeat-x;
     animation: dashFlow 2s linear infinite;
@@ -126,14 +126,14 @@
   .cloud-shape {
     position: relative;
     background: rgba(255,255,255,0.88);
-    border: 1px solid rgba(83,58,253,0.15);
+    border: 1px solid rgba(201,121,60,0.18);
     border-radius: 999px;
     padding: 7px 16px;
     font-size: 11px;
     font-weight: 500;
-    color: rgba(13,37,61,0.32);
+    color: rgba(59,44,33,0.32);
     white-space: nowrap;
-    box-shadow: 0 6px 16px -6px rgba(0,55,112,0.18);
+    box-shadow: 0 6px 16px -6px rgba(120,72,30,0.20);
   }
   .cloud-shape::before, .cloud-shape::after {
     content: '';
@@ -207,10 +207,10 @@
 <section class="relative overflow-hidden bg-dots">
   <div class="absolute inset-x-0 top-0 h-[420px] overflow-hidden pointer-events-none" aria-hidden="true">
     <div class="absolute -top-24 -left-20 w-[26rem] h-[26rem] rounded-full opacity-60 blur-3xl" style="background:#f5e9d4"></div>
-    <div class="absolute -top-16 left-1/4 w-96 h-96 rounded-full opacity-50 blur-3xl" style="background:#9b6829"></div>
-    <div class="absolute -top-28 left-1/2 -translate-x-1/2 w-[28rem] h-[28rem] rounded-full opacity-40 blur-3xl" style="background:#b9b9f9"></div>
-    <div class="absolute -top-20 right-1/4 w-96 h-96 rounded-full opacity-50 blur-3xl" style="background:#533afd"></div>
-    <div class="absolute -top-24 -right-20 w-96 h-96 rounded-full opacity-40 blur-3xl" style="background:#ea2261"></div>
+    <div class="absolute -top-16 left-1/4 w-96 h-96 rounded-full opacity-50 blur-3xl" style="background:#DDA23A"></div>
+    <div class="absolute -top-28 left-1/2 -translate-x-1/2 w-[28rem] h-[28rem] rounded-full opacity-45 blur-3xl" style="background:#F3C88E"></div>
+    <div class="absolute -top-20 right-1/4 w-96 h-96 rounded-full opacity-50 blur-3xl" style="background:#C9793C"></div>
+    <div class="absolute -top-24 -right-20 w-96 h-96 rounded-full opacity-40 blur-3xl" style="background:#E8875C"></div>
   </div>
   <div class="absolute inset-0 bg-cover bg-center opacity-[0.16]" style="background-image:url('./assets/bg-couple.jpg')" aria-hidden="true"></div>
   <div class="absolute inset-0 bg-gradient-to-b from-transparent via-white/70 to-white pointer-events-none"></div>
@@ -329,9 +329,9 @@
       <div class="reveal card-hover bg-white border border-hairline shadow-card rounded-xl p-8" style="transition-delay:120ms">
         <div class="w-12 h-12 rounded-full bg-white border border-hairline icon-glow flex items-center justify-center mb-3">
           <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none">
-            <circle cx="11" cy="11" r="10" fill="#533afd"/>
+            <circle cx="11" cy="11" r="10" fill="#C9793C"/>
             <path d="M11 15.3s-5.2-3.2-5.2-6.9c0-1.9 1.6-3.4 3.5-3.4.9 0 1.8.4 2.4 1.2.6-.8 1.5-1.2 2.4-1.2 1.9 0 3.5 1.5 3.5 3.4 0 3.7-5.2 6.9-5.2 6.9z" fill="#FFFFFF"/>
-            <circle cx="19" cy="18" r="4" fill="#533afd" stroke="#FFFFFF" stroke-width="1.5"/>
+            <circle cx="19" cy="18" r="4" fill="#C9793C" stroke="#FFFFFF" stroke-width="1.5"/>
           </svg>
         </div>
         <p class="font-bold text-xl text-ink mb-2">공단 지정기관, 안심 이용</p>
@@ -400,9 +400,9 @@
       <div class="reveal card-hover bg-white border border-hairline rounded-xl shadow-card p-8 text-center" style="transition-delay:100ms">
         <div class="w-12 h-12 mx-auto rounded-full bg-white border border-hairline icon-glow flex items-center justify-center mb-3">
           <svg class="w-7 h-7" viewBox="0 0 24 24" fill="none">
-            <circle cx="11" cy="11" r="10" fill="#533afd"/>
+            <circle cx="11" cy="11" r="10" fill="#C9793C"/>
             <path d="M11 15.3s-5.2-3.2-5.2-6.9c0-1.9 1.6-3.4 3.5-3.4.9 0 1.8.4 2.4 1.2.6-.8 1.5-1.2 2.4-1.2 1.9 0 3.5 1.5 3.5 3.4 0 3.7-5.2 6.9-5.2 6.9z" fill="#FFFFFF"/>
-            <circle cx="19" cy="18" r="4" fill="#533afd" stroke="#FFFFFF" stroke-width="1.5"/>
+            <circle cx="19" cy="18" r="4" fill="#C9793C" stroke="#FFFFFF" stroke-width="1.5"/>
           </svg>
         </div>
         <p class="font-bold text-ink text-base mb-2">공단 지정<br>장기요양기관</p>
@@ -496,35 +496,35 @@
         <p class="text-xs font-bold text-ink-mute tracking-wide mb-3">인천광역시</p>
         <div class="relative mx-auto aspect-[340/385]">
           <svg viewBox="0 0 340 385" class="w-full h-full" aria-hidden="true">
-            <path d="M0,40 Q25,150 0,290 L-15,290 L-15,40 Z" fill="#a8c3de" opacity="0.22"/>
-            <circle cx="12" cy="110" r="6" fill="#a8c3de" opacity="0.3"/>
-            <circle cx="6" cy="230" r="8" fill="#a8c3de" opacity="0.25"/>
+            <path d="M0,40 Q25,150 0,290 L-15,290 L-15,40 Z" fill="#D7B78C" opacity="0.28"/>
+            <circle cx="12" cy="110" r="6" fill="#D7B78C" opacity="0.35"/>
+            <circle cx="6" cy="230" r="8" fill="#D7B78C" opacity="0.3"/>
 
             <!-- 강화군 (islands, not serviced) -->
-            <rect x="105" y="20" width="80" height="60" rx="16" fill="#f6f9fc" stroke="#e3e8ee" stroke-width="2"/>
-            <text x="145" y="55" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#64748d">강화군</text>
+            <rect x="105" y="20" width="80" height="60" rx="16" fill="#FBF4E9" stroke="#EAD9C0" stroke-width="2"/>
+            <text x="145" y="55" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#8A7361">강화군</text>
 
             <!-- Row 1 -->
-            <rect x="60" y="115" width="80" height="66" rx="16" fill="#533afd"/>
+            <rect x="60" y="115" width="80" height="66" rx="16" fill="#C9793C"/>
             <text x="100" y="153" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="700" font-size="15" fill="#FFFFFF">서해구</text>
-            <rect x="150" y="115" width="80" height="66" rx="16" fill="#665efd"/>
+            <rect x="150" y="115" width="80" height="66" rx="16" fill="#A85C3F"/>
             <text x="190" y="153" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="700" font-size="15" fill="#FFFFFF">계양구</text>
-            <rect x="240" y="115" width="80" height="66" rx="16" fill="#b9b9f9"/>
-            <text x="280" y="153" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="700" font-size="15" fill="#0d253d">부평구</text>
+            <rect x="240" y="115" width="80" height="66" rx="16" fill="#DDA23A"/>
+            <text x="280" y="153" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="700" font-size="15" fill="#3B2C21">부평구</text>
 
             <!-- Row 2 (not serviced) -->
-            <rect x="60" y="205" width="80" height="66" rx="16" fill="#f6f9fc" stroke="#e3e8ee" stroke-width="2"/>
-            <text x="100" y="243" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#64748d">동구</text>
-            <rect x="150" y="205" width="80" height="66" rx="16" fill="#f6f9fc" stroke="#e3e8ee" stroke-width="2"/>
-            <text x="190" y="243" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#64748d">미추홀구</text>
-            <rect x="240" y="205" width="80" height="66" rx="16" fill="#f6f9fc" stroke="#e3e8ee" stroke-width="2"/>
-            <text x="280" y="243" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#64748d">남동구</text>
+            <rect x="60" y="205" width="80" height="66" rx="16" fill="#FBF4E9" stroke="#EAD9C0" stroke-width="2"/>
+            <text x="100" y="243" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#8A7361">동구</text>
+            <rect x="150" y="205" width="80" height="66" rx="16" fill="#FBF4E9" stroke="#EAD9C0" stroke-width="2"/>
+            <text x="190" y="243" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#8A7361">미추홀구</text>
+            <rect x="240" y="205" width="80" height="66" rx="16" fill="#FBF4E9" stroke="#EAD9C0" stroke-width="2"/>
+            <text x="280" y="243" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#8A7361">남동구</text>
 
             <!-- Row 3 (not serviced) -->
-            <rect x="60" y="295" width="80" height="66" rx="16" fill="#f6f9fc" stroke="#e3e8ee" stroke-width="2"/>
-            <text x="100" y="333" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#64748d">중구</text>
-            <rect x="150" y="295" width="80" height="66" rx="16" fill="#f6f9fc" stroke="#e3e8ee" stroke-width="2"/>
-            <text x="190" y="333" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#64748d">연수구</text>
+            <rect x="60" y="295" width="80" height="66" rx="16" fill="#FBF4E9" stroke="#EAD9C0" stroke-width="2"/>
+            <text x="100" y="333" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#8A7361">중구</text>
+            <rect x="150" y="295" width="80" height="66" rx="16" fill="#FBF4E9" stroke="#EAD9C0" stroke-width="2"/>
+            <text x="190" y="333" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="600" font-size="14" fill="#8A7361">연수구</text>
           </svg>
           <div class="float absolute whitespace-nowrap bg-white rounded-xl shadow-brand-lg px-2 py-1.5 sm:px-3 sm:py-2 flex items-center gap-1.5 sm:gap-2" style="left:82%; top:8%; transform:translate(-50%,-50%)">
             <img src="./brand_logo/logo.svg" alt="위드케어 로고" class="w-6 h-6 sm:w-7 sm:h-7 rounded-lg flex-shrink-0">
