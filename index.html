@@ -491,38 +491,40 @@
   <div class="absolute inset-0 bg-gradient-to-tr from-canvas-soft via-white to-canvas-soft"></div>
   <div class="relative max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-16 text-center">
     <h2 class="font-display text-[32px] sm:text-[40px] leading-[1.15] text-ink mb-10">서비스 가능 지역</h2>
-    <div class="relative mx-auto aspect-[500/280] max-w-[420px] sm:max-w-[480px]">
-      <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M5,59 a45,45 0 1,0 90,0 a45,45 0 1,0 -90,0" fill="none" stroke="#D8D2CC" stroke-width="4.2" stroke-linejoin="round" opacity="0.55"/>
-        <path class="flow-dash" d="M5,59 a45,45 0 1,0 90,0 a45,45 0 1,0 -90,0" fill="none" stroke="#FFFFFF" stroke-width="0.6" stroke-linejoin="round" opacity="0.9"/>
-        <circle cx="50" cy="14" r="1.4" fill="#A85C3F"/>
-        <circle cx="14" cy="86" r="1.4" fill="#A85C3F"/>
-        <circle cx="86" cy="86" r="1.4" fill="#A85C3F"/>
-        <g>
-          <rect x="-5" y="-2.4" width="10" height="4.6" rx="1.4" fill="#DDA23A" stroke="#B37E22" stroke-width="0.3"/>
-          <path d="M-1.6 -3.8 L-0.6 -2.4 L1.6 -2.4 L1.6 -3.8 Z" fill="#DCE9E3" stroke="#B37E22" stroke-width="0.25"/>
-          <circle cx="-2.8" cy="2.3" r="1.1" fill="#3E2C22"/>
-          <circle cx="2.8" cy="2.3" r="1.1" fill="#3E2C22"/>
-          <g transform="translate(0 -0.3) scale(0.085) translate(-32 -32)">
-            <path d="M32 46s-13-8.1-13-17.3C19 22.8 23 19 27.6 19c2.3 0 4.6 1.1 6 3 1.4-1.9 3.7-3 6-3C44.2 19 48 22.8 48 28.7 48 37.9 35 46 35 46" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" transform="translate(-2 -4)"/>
-            <path d="M16 33h6l3-6 4 12 3-8 2 4h6" stroke="#733E29" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          </g>
-          <circle class="smoke-puff" cx="-6.5" cy="-1.6" r="0.9" fill="#FFFFFF"/>
-          <circle class="smoke-puff" cx="-8.5" cy="-2.1" r="1.15" fill="#FFFFFF" style="animation-delay:4s"/>
-          <circle class="smoke-puff" cx="-10.8" cy="-2.7" r="1.4" fill="#FFFFFF" style="animation-delay:8s"/>
-          <animateMotion dur="70s" repeatCount="indefinite" rotate="auto" path="M5,59 a45,45 0 1,0 90,0 a45,45 0 1,0 -90,0"/>
-        </g>
-      </svg>
-      <div class="absolute whitespace-nowrap bg-white rounded-xl shadow-card px-3 py-2 flex items-center gap-2" style="left:50%; top:62%; transform:translate(-50%,-50%)">
-        <img src="./brand_logo/logo.svg" alt="위드케어 로고" class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg flex-shrink-0">
-        <div class="text-left leading-tight">
-          <p class="font-display font-bold text-primary text-xs sm:text-sm">위드케어</p>
-          <p class="text-[9px] sm:text-[10px] text-ink-mute">재가노인복지센터</p>
+    <div class="relative mx-auto max-w-[420px]">
+      <div class="reveal bg-white border border-hairline shadow-brand-lg rounded-[28px] p-5 sm:p-7">
+        <div class="relative mx-auto aspect-[350/300]">
+          <svg viewBox="-30 0 350 300" class="w-full h-full" aria-hidden="true">
+            <path d="M-30,40 Q0,150 -30,260 L-45,260 L-45,40 Z" fill="#a8c3de" opacity="0.22"/>
+            <circle cx="-12" cy="105" r="7" fill="#a8c3de" opacity="0.3"/>
+            <circle cx="-20" cy="200" r="10" fill="#a8c3de" opacity="0.25"/>
+            <g stroke="#FFFFFF" stroke-width="3.5" stroke-linejoin="round">
+              <path d="M165,150 L50,60 L150,20 L270,75 Z" fill="#b9b9f9"/>
+              <path d="M165,150 L270,75 L290,180 L205,270 Z" fill="#665efd"/>
+              <path d="M165,150 L205,270 L95,260 L20,165 L50,60 Z" fill="#533afd"/>
+            </g>
+            <text x="160" y="70" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="700" font-size="18" fill="#0d253d">계양구</text>
+            <text x="248" y="192" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">부평구</text>
+            <text x="98" y="197" text-anchor="middle" font-family="'Inter','Noto Sans KR',sans-serif" font-weight="700" font-size="18" fill="#FFFFFF">서해구</text>
+          </svg>
+          <div class="float absolute whitespace-nowrap bg-white rounded-xl shadow-brand-lg px-2 py-1.5 sm:px-3 sm:py-2 flex items-center gap-1.5 sm:gap-2" style="left:83%; top:9%; transform:translate(-50%,-50%)">
+            <img src="./brand_logo/logo.svg" alt="위드케어 로고" class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg flex-shrink-0">
+            <div class="text-left leading-tight">
+              <p class="font-display font-bold text-primary text-xs sm:text-sm">위드케어</p>
+              <p class="hidden sm:block text-[10px] text-ink-mute">재가노인복지센터</p>
+            </div>
+          </div>
         </div>
       </div>
-      <span class="absolute whitespace-nowrap rounded-full bg-white border border-hairline shadow-card text-black font-bold text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5" style="left:50%; top:14%; transform:translate(-50%,-50%)">인천 계양구</span>
-      <span class="absolute whitespace-nowrap rounded-full bg-white border border-hairline shadow-card text-black font-bold text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5" style="left:14%; top:86%; transform:translate(-50%,-50%)">인천 서해구</span>
-      <span class="absolute whitespace-nowrap rounded-full bg-white border border-hairline shadow-card text-black font-bold text-sm sm:text-base px-4 sm:px-5 py-2 sm:py-2.5" style="left:86%; top:86%; transform:translate(-50%,-50%)">인천 부평구</span>
+      <div class="reveal inline-flex items-center gap-3 bg-white border border-hairline shadow-card rounded-2xl px-5 py-3.5 mt-6">
+        <span class="w-9 h-9 rounded-full bg-primary-subdued flex items-center justify-center flex-shrink-0">
+          <svg class="w-5 h-5 text-primary-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        </span>
+        <div class="text-left">
+          <p class="font-bold text-ink text-base">인천</p>
+          <p class="text-sm text-ink-mute">계양구 · 서해구 · 부평구</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
